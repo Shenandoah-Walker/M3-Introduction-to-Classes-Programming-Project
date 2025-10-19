@@ -1,48 +1,62 @@
 /*Date.h file:
-
 #ifndef DATE_H
 #define DATE_H
+
+#include <iostream>
+#include <string>
 
 class Date 
 {
 
-public:
-  int month;
-  int day;
-  int year;
-  Date(int = 1, int = 1, int = 1900);
-
-
-
 private:
+int month;
+int day;
+int year;
+
+public:
+  Date();
+  Date(int, int, int);
+
   void setDate(int m, int day, int y);
-  int lastDay();
-  int lastDay(int month, int year);
-  bool isLeapYear();
-  bool isLeapYear(int year);
-  void printDate1();
-  void printDate2();
-  void printDate3();
 
+  int getMonth() const;
+  int getDay() const;
+  int getYear() const;
 
+  bool isLeapYear() const;
+  bool isLeapYear(int year) const;
+
+  int lastDay() const;
+  int lastDay(int month, int year) const;
+
+  std :: string monthName() const;
+
+  void printDate1() const;
+  void printDate2() const;
+  void printDate3() const;
 
 };
 
 
 #endif
+
 */
 
 #include <iostream>
 #include <string>
 #include <iomanip>
-#include <sstream>
 #include "Date.h"
+
 using namespace std;
 
-Date::Date(int m, int d, int y)
-{
+Date::Date() {
+  setDate(1, 1, 1900);
+}
+
+Date::Date(int m, int d, int y) {
   setDate(m, d, y);
 }
+
 void Date::setDate(int m, int d, int y) {
   if (m < 1 || m > 12 || d < 1 || d > lastDay(m, y)) {
     month = 1;
@@ -56,12 +70,23 @@ void Date::setDate(int m, int d, int y) {
   }
 }
 
-int Date::lastDay() {
+int Date::getMonth() const {
+  return month;
+}
+
+int Date::getDay() const {
+  return day;
+}
+
+int Date::getYear() const {
+  return year;
+}
+
+int Date::lastDay() const {
   return lastDay(month, year);
 }
 
-int Date::lastDay(int month, int year) {
-  
+int Date::lastDay(int month, int year) const {
   if (month == 2) {
     if (isLeapYear(year)) {
       return 29;
@@ -70,7 +95,6 @@ int Date::lastDay(int month, int year) {
       return 28;
     }
   }
-    
   else if (month == 4 || month == 6 || month == 9 || month == 11) {
     return 30;
   }
@@ -78,79 +102,75 @@ int Date::lastDay(int month, int year) {
     return 31;
   }
 }
-bool Date::isLeapYear() {
+
+bool Date::isLeapYear() const {
   return isLeapYear(year);
 }
-bool Date::isLeapYear(int year) {
+
+bool Date::isLeapYear(int year) const {
   // A year is a leap year if it is divisible by 4, but not by 100, unless it is also divisible by 400.
-  if (year / 4 == 0) {
-    if (year / 100 == 0) {
-      if (year / 400 == 0) {
-        return true;
-      }
-      else {
-        return false;
-      }
+  if (year % 4 == 0) {
+    if (year % 100 == 0) {
+      return year % 400 == 0;
     }
     else {
       return true;
     }
   }
-  else{
+  else {
     return false;
   }
-  
 }
 
-string Date :: monthName() {
-
-string monthWords;
-if (month == 1) {
-  monthWords = "January";
-}
-else if (month == 2) {
-  monthWords = "February";
-}
-else if (month == 3) {
-  monthWords = "March";
-}
-else if (month == 4) {
-  monthWords = "April";
-}
-else if (month == 5) {
-  monthWords = "May";
-}
-else if (month == 6) {
-  monthWords = "June";
-}
-else if (month == 7) {
-  monthWords = "July";
-}
-else if (month == 8) {
-  monthWords = "August";
-}
-else if (month == 9) {
-  monthWords = "September";
-}
-else if (month == 10) {
-  monthWords = "October";
-}
-else if (month == 11) {
-  monthWords = "November";
+string Date::monthName() const {
+  string monthWords;
+  if (month == 1) {
+    monthWords = "January";
   }
-else if (month == 12) {
-  monthWords = "December";
-}
-return monthWords;
+  else if (month == 2) {
+    monthWords = "February";
   }
+  else if (month == 3) {
+    monthWords = "March";
+  }
+  else if (month == 4) {
+    monthWords = "April";
+  }
+  else if (month == 5) {
+    monthWords = "May";
+  }
+  else if (month == 6) {
+    monthWords = "June";
+  }
+  else if (month == 7) {
+    monthWords = "July";
+  }
+  else if (month == 8) {
+    monthWords = "August";
+  }
+  else if (month == 9) {
+    monthWords = "September";
+  }
+  else if (month == 10) {
+    monthWords = "October";
+  }
+  else if (month == 11) {
+    monthWords = "November";
+  }
+  else if (month == 12) {
+    monthWords = "December";
+  }
+  return monthWords;
+}
 
-void Date::printDate1() {
+void Date::printDate1() const {
   cout << month << "/" << day << "/" << year << endl;
 }
-void Date::printDate2() {
+
+void Date::printDate2() const {
   cout << monthName() << " " << day << ", " << year << endl;
 }
-void Date::printDate3() {
+
+void Date::printDate3() const {
   cout << day << " " << monthName() << " " << year << endl;
-  
 }
