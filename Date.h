@@ -18,33 +18,21 @@ public:
 
   void setDate(int m, int day, int y);
 
-  int getMonth(); const
-  int getDay(); const
-  int getYear(); const
+  int getMonth() const;
+  int getDay() const;
+  int getYear() const;
 
-  bool isLeapYear(); const
-  bool isLeapYear(int year); const
+  bool isLeapYear() const;
+  bool isLeapYear(int year) const;
 
-  int lastDay(); const
-  int lastDay(int month, int year); const
+  int lastDay() const;
+  int lastDay(int month, int year) const;
 
-  std :: string monthName(); const
+  std :: string monthName() const;
 
-  void printDate1(); const
-  void printDate2(); const
-  void printDate3(); const
-
-
-
-
-
-
-
-
-
-
-
-
+  void printDate1() const;
+  void printDate2() const;
+  void printDate3() const;
 
 };
 
