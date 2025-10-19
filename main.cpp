@@ -8,5 +8,5 @@ int main() {
   d1.printDate1();
   d1.printDate2();
   d1.printDate3();
-  
+
   }

@@ -7,26 +7,41 @@
 class Date 
 {
 
+private:
+int month;
+int day;
+int year;
+
 public:
-  int month;
-  int day;
-  int year;
   Date();
   Date(int, int, int);
-  void printDate1();
-  void printDate2();
-  void printDate3();
+
   void setDate(int m, int day, int y);
-  int lastDay();
-  int lastDay(int month, int year);
-  bool isLeapYear();
-  bool isLeapYear(int year);
-  std :: string monthName();
+
+  int getMonth(); const
+  int getDay(); const
+  int getYear(); const
+
+  bool isLeapYear(); const
+  bool isLeapYear(int year); const
+
+  int lastDay(); const
+  int lastDay(int month, int year); const
+
+  std :: string monthName(); const
+
+  void printDate1(); const
+  void printDate2(); const
+  void printDate3(); const
 
 
 
 
-private:
+
+
+
+
+
 
 
 
