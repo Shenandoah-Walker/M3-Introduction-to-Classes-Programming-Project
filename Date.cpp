@@ -102,15 +102,55 @@ bool Date::isLeapYear(int year) {
   
 }
 
+string Date :: monthName() {
+
+string monthWords;
+if (month == 1) {
+  monthWords = "January";
+}
+else if (month == 2) {
+  monthWords = "February";
+}
+else if (month == 3) {
+  monthWords = "March";
+}
+else if (month == 4) {
+  monthWords = "April";
+}
+else if (month == 5) {
+  monthWords = "May";
+}
+else if (month == 6) {
+  monthWords = "June";
+}
+else if (month == 7) {
+  monthWords = "July";
+}
+else if (month == 8) {
+  monthWords = "August";
+}
+else if (month == 9) {
+  monthWords = "September";
+}
+else if (month == 10) {
+  monthWords = "October";
+}
+else if (month == 11) {
+  monthWords = "November";
+  }
+else if (month == 12) {
+  monthWords = "December";
+}
+return monthWords;
+  }
+
 void Date::printDate1() {
   cout << month << "/" << day << "/" << year << endl;
 }
 void Date::printDate2() {
-  //Temporary format to change later (placeholder function for now)
-  cout << day << " " << month << " " << year << endl;
+  cout << monthName() << " " << day << ", " << year << endl;
 }
 void Date::printDate3() {
-  //Temporary format to change later (placeholder function for now)
-  cout << day << " " << month << " " << year << endl;
+  cout << day << " " << monthName() << " " << year << endl;
   
 }

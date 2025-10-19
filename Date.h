@@ -1,6 +1,9 @@
 #ifndef DATE_H
 #define DATE_H
 
+#include <iostream>
+#include <string>
+
 class Date 
 {
 
@@ -18,6 +21,7 @@ public:
   int lastDay(int month, int year);
   bool isLeapYear();
   bool isLeapYear(int year);
+  std :: string monthName();
 
 
 
