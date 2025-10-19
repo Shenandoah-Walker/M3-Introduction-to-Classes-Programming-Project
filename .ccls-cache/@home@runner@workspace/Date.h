@@ -1,3 +1,10 @@
+/*Class purpose: Take as input a date and output it in different formats. The three formats are: 
+- 12/25/2021
+- December 25, 2021
+- 25 December 2021
+  */
+
+
 #ifndef DATE_H
 #define DATE_H
 
