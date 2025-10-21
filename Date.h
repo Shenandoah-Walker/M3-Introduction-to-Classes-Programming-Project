@@ -11,6 +11,8 @@
 #include <iostream>
 #include <string>
 
+using namespace std;
+
 class Date 
 {
 
@@ -20,25 +22,126 @@ int day;
 int year;
 
 public:
+  /*
+  Constructor: Date
+  Purpose: Create a date object
+  Parameters:
+    - int month
+    - int day
+    - int year
+  Returns: None
+  Preconditions: None
+  Postconditions: None
+  */
   Date();
-  Date(int, int, int);
+  Date(int month, int day, int year);
 
-  void setDate(int m, int day, int y);
+  /*
+  Mutator: setDate
+  Purpose: Set the date
+  Parameters:
+    - int m
+    - int d
+    - int y
+  Returns: None
+  Preconditions: None
+  Postconditions: None
+  */
+
+  void setDate(int m, int d, int y);
+
+  /*
+  Accessor: getMonth
+  Purpose: Get the month
+  Parameters: None
+  Returns: int
+  Preconditions: None
+  Postconditions: None
+  */
 
   int getMonth() const;
+
+  /*
+  Accessor: getDay
+  Purpose: Get the day
+  Parameters: None
+  Returns: int
+  Preconditions: None 
+  Postconditions: None
+  */
+
   int getDay() const;
+
+  /*
+  Accessor: getYear
+  Purpose: Get the year
+  Parameters: None
+  Returns: int
+  Preconditions: None
+  Postconditions: None
+  */
   int getYear() const;
 
+  /*
+  Accessor: isLeapYear
+  Purpose: Check if the year is a leap year
+  Parameters: None
+  Returns: bool
+  Preconditions: None
+  Postconditions: None
+  */
   bool isLeapYear() const;
   bool isLeapYear(int year) const;
 
+  /*
+  Accessor: lastDay
+  Purpose: Get the last day of the month
+  Parameters: None
+  Returns: int
+  Preconditions: None
+  Postconditions: None
+  */
   int lastDay() const;
   int lastDay(int month, int year) const;
 
-  std :: string monthName() const;
+  /*
+  Accessor: monthName
+  Purpose: Get the name of the month
+  Parameters: None
+  Returns: string
+  Preconditions: None
+  Postconditions: None
+  */
+  string monthName() const;
 
+  /* 
+  Accessor: printDate1
+  Purpose: Print the date in the format 12/25/2021
+  Parameters: None
+  Returns: None
+  Preconditions: None
+  Postconditions: None
+  */
   void printDate1() const;
+
+  /*
+  Accessor: printDate2
+  Purpose: Print the date in the format December 25, 2021
+  Parameters: None
+  Returns: None
+  Preconditions: None
+  Postconditions: None
+  */
   void printDate2() const;
+
+  /*
+  Accessor: printDate3
+  Purpose: Print the date in the format 25 December 2021
+  Parameters: None
+  Returns: None
+  Preconditions: None
+  Postconditions: None
+  */
   void printDate3() const;
 
 };
