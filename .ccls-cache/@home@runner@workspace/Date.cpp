@@ -26,17 +26,7 @@ void Date::setDate(int m, int d, int y) {
   }
 }
 
-int Date::getMonth() const {
-  return month;
-}
 
-int Date::getDay() const {
-  return day;
-}
-
-int Date::getYear() const {
-  return year;
-}
 
 int Date::lastDay() const {
   return lastDay(month, year);

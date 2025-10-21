@@ -50,37 +50,6 @@ public:
 
   void setDate(int m, int d, int y);
 
-  /*
-  Accessor: getMonth
-  Purpose: Get the month
-  Parameters: None
-  Returns: int
-  Preconditions: None
-  Postconditions: None
-  */
-
-  int getMonth() const;
-
-  /*
-  Accessor: getDay
-  Purpose: Get the day
-  Parameters: None
-  Returns: int
-  Preconditions: None 
-  Postconditions: None
-  */
-
-  int getDay() const;
-
-  /*
-  Accessor: getYear
-  Purpose: Get the year
-  Parameters: None
-  Returns: int
-  Preconditions: None
-  Postconditions: None
-  */
-  int getYear() const;
 
   /*
   Accessor: isLeapYear
@@ -95,7 +64,7 @@ public:
 
   /*
   Accessor: lastDay
-  Purpose: Get the last day of the month
+  Purpose: Determine the last day of the month
   Parameters: None
   Returns: int
   Preconditions: None
@@ -106,7 +75,7 @@ public:
 
   /*
   Accessor: monthName
-  Purpose: Get the name of the month
+  Purpose: Determine the name of the month
   Parameters: None
   Returns: string
   Preconditions: None
