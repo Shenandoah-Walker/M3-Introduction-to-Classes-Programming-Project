@@ -51,6 +51,7 @@ double NumberArray::calcAverage() {
 }
 
 void NumberArray::printArray() {
+  cout << fixed << setprecision(1);
   for (int i = 0; i < size; i++) {
     cout << array[i] << " ";
   }

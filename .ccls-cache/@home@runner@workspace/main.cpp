@@ -16,5 +16,11 @@ int main() {
   array1.printArray();
   cout << endl;
   NumberArray array2(10);
+  for (int i = 0; i < 10; i++) {
+    array2.setNumber(i, dist(engine));
+  }
+  array2.printArray();
+  cout << endl;
+  
   
 }
