@@ -27,7 +27,6 @@ void Date::setDate(int m, int d, int y) {
 }
 
 
-
 int Date::lastDay() const {
   return lastDay(month, year);
 }
