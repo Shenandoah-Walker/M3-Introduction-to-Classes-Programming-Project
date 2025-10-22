@@ -1,12 +1,8 @@
 #include <iostream>
 #include <iomanip>
-#include <random>
 #include "NumberArray.h"
 
 using namespace std;
-
-random_device engine;
-uniform_real_distribution<double> dist(0.0, 100.0);
 
 NumberArray::NumberArray() {
   size = MAX_SIZE;
