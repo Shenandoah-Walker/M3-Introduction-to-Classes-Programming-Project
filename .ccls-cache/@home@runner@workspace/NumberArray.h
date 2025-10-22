@@ -12,6 +12,7 @@ private:
   int size; 
   static const int MAX_SIZE = 10;
   static const int MIN_SIZE = 1;
+  static const int DEFAULT_VALUE = 10000;
 
 public:
   //Constructor
@@ -21,7 +22,7 @@ public:
   ~NumberArray() {delete [] array; cout << "The destructor is running" << endl;};
 
   //Accessors
-  void setNumber(int index, double value) {array[index] = value;};
+  void setNumber(int index, double value);
   int getNumber(int index);
   double findMin();
   double findMax();

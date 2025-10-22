@@ -12,11 +12,20 @@ NumberArray::NumberArray(int size) {
   }
 }
 
-//getNumber function
+
+void NumberArray::setNumber(int index, double value) {
+  if (index < 0 || index >= size) {
+  cout << "The index is out of the bounds of the array, number not stored" << endl; 
+  }
+  else{
+    array[index] = value;
+    }
+}
+    
 int NumberArray::getNumber(int index) {
   if (index < 0 || index >= size) {
-    cout << "Error: Index out of bounds. The default value returned is 1." << endl;
-    return 1;
+    cout << "Error: Index out of bounds. This function should now return 10000." << endl;
+    return DEFAULT_VALUE;
   }
   return array[index];
   
@@ -56,8 +65,5 @@ void NumberArray::printArray() {
     cout << array[i] << " ";
   }
   cout << endl;
-  cout << "The minimum value in the array is: " << findMin() << endl;
-  cout << "The maximum value in the array is: " << findMax() << endl;
-  cout << "The average of the values in the array is: " << calcAverage() << endl;
 }
 
