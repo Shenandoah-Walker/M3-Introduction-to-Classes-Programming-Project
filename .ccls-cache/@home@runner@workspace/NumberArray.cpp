@@ -4,21 +4,22 @@
 
 using namespace std;
 
-NumberArray::NumberArray() {
-  size = MAX_SIZE;
+NumberArray::NumberArray(int size) {
+  this->size = size;
   array = new double[size];
   for (int i = 0; i < size; i++) {
     array[i] = 0.0;
   }
 }
 
-NumberArray::NumberArray(int size) {
-  this->size = size;
-  array = new double[size];
-  
-  for (int i = 0; i < size; i++) {
-    array[i] = dist(engine);
+//getNumber function
+int NumberArray::getNumber(int index) {
+  if (index < 0 || index >= size) {
+    cout << "Error: Index out of bounds. The default value returned is 1." << endl;
+    return 1;
   }
+  return array[index];
+  
 }
 
 double NumberArray::findMin() {

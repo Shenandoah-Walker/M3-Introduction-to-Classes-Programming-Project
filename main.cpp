@@ -13,6 +13,8 @@ int main() {
 
   //Test default constructor
   NumberArray array1;
+  array1.printArray();
+  cout << endl;
   NumberArray array2(10);
   
 }

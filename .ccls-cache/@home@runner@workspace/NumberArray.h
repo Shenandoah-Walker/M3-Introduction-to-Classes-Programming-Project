@@ -11,10 +11,10 @@ private:
   double *array;
   int size; 
   static const int MAX_SIZE = 10;
+  static const int MIN_SIZE = 1;
 
 public:
   //Constructor
-  NumberArray();
   NumberArray(int size = MAX_SIZE);
 
   //Destructor
@@ -22,7 +22,7 @@ public:
 
   //Accessors
   void setNumber(int index, double value) {array[index] = value;};
-  int getNumber(int index) {return array[index];};
+  int getNumber(int index);
   double findMin();
   double findMax();
   double calcAverage();
