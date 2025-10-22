@@ -4,8 +4,8 @@
 
 using namespace std;
 
-NumberArray::NumberArray(int size) {
-  this->size = size;
+NumberArray::NumberArray(int arraySize) {
+  size = arraySize;
   array = new double[size];
   for (int i = 0; i < size; i++) {
     array[i] = 0.0;
@@ -15,7 +15,7 @@ NumberArray::NumberArray(int size) {
 
 void NumberArray::setNumber(int index, double value) {
   if (index < 0 || index >= size) {
-  cout << "The index is out of the bounds of the array, number not stored" << endl; 
+  cout << "The index is out of the bounds of the array, number not stored." << endl; 
   }
   else{
     array[index] = value;
@@ -24,7 +24,7 @@ void NumberArray::setNumber(int index, double value) {
     
 int NumberArray::getNumber(int index) {
   if (index < 0 || index >= size) {
-    cout << "Error: Index out of bounds. This function should now return 10000." << endl;
+    cout << "Error: Index out of bounds. This function will now return 10000." << endl;
     return DEFAULT_VALUE;
   }
   return array[index];
