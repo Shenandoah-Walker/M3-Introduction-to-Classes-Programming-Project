@@ -1,4 +1,4 @@
-//Test program
+//This is the test program for the NumberArray class.
 
 
 #include <iostream>
